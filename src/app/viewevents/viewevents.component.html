@@ -1,0 +1,57 @@
+<nav class="navbar fixed-top navbar-expand-lg bg-white">
+    <div class="container">
+        <a class="navbar-brand" >welcome {{ currentUser }}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-end">
+                <li class="nav-item">
+                    <button (click)="logout()" type="button" class="btn btn-secondary m-2">logout</button>
+                </li>
+                <li class="nav-item">
+                    <button routerLink="/deleteaccount" type="button" class="btn btn-danger m-2">Delete account</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container hero">
+    <div class="row justify-content-center">
+        <div class="col-md-6 bg-white p-4">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3>All events</h3>
+                <button routerLink="/dashboard" class="btn btn-primary">go back</button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="title-col" scope="col">Title</th>
+                            <th scope="col">Content</th>
+                            <th class="title-col" scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr *ngFor="let event of events;let i = index">
+                            <td>{{event.heading}}</td>
+                            <td>{{event.content}}</td>
+                            <td><a class="mx-2" (click)="editEvent(i)"> 
+                                    <img title="edit" src="./../../assets/edit.png" alt=""> 
+                                </a> 
+                                <a class="mx-2" (click)="deleteEvent(i)"> 
+                                    <img title="delete" src="./../../assets/delete.png" alt=""> 
+                                </a>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

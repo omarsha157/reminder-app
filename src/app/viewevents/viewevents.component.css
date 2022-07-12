@@ -1,0 +1,15 @@
+.hero {
+    margin-top: 12vh;
+}
+
+table img {
+    width: 25px;
+}
+
+table a {
+    cursor: pointer;
+}
+
+.title-col {
+    width: 25%;
+}

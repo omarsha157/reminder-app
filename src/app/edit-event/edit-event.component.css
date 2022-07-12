@@ -1,0 +1,9 @@
+.container {
+    margin-top: 12vh;
+}
+
+
+textarea {
+    resize: none;
+    overflow: auto;
+}

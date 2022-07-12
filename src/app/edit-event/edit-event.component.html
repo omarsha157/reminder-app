@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5 bg-white p-4">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1>Edit event</h1>
+                <button routerLink="/viewevents" class="btn btn-primary">go back</button>
+            </div>
+            <form [formGroup]="editForm" (ngSubmit)="submitEdit()">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">event title</label>
+                    <input formControlName="eventHead" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">event body</label>
+                    <textarea rows="5" formControlName="eventBody" type="text" class="form-control" id="exampleInputPassword1"></textarea>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary">Save edit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
