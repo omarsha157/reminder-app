@@ -14,8 +14,8 @@ export class DashboardComponent implements OnInit {
   uniqueid = localStorage.getItem('currId')
 
   reminderForm = this.fb.group({
-    eventHead:['',[Validators.required,Validators.pattern('[a-zA-Z0-9 ]*')]],
-    eventBody:['',[Validators.required,Validators.pattern('[a-zA-Z0-9 ]*')]],
+    eventHead:['',[Validators.required,Validators.pattern('[a-zA-Z0-9 !@#$%^&*()_+-=:;",./\'"]*')]],
+    eventBody:['',[Validators.required,Validators.pattern('[a-zA-Z0-9 !@#$%^&*()_+-=:;",./\'"]*')]],
   })
 
   constructor(private fb:FormBuilder, private ds:DataService,private router:Router) { }

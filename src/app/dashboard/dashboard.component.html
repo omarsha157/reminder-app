@@ -28,12 +28,12 @@
             <form [formGroup]="reminderForm" (ngSubmit)="addEvent()">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Title</label>
-                    <input formControlName="eventHead" type="text" class="form-control" id="exampleInputEmail1"
+                    <input autocomplete="off" formControlName="eventHead" type="text" class="form-control" id="exampleInputEmail1"
                         aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Content</label>
-                    <textarea rows="5" formControlName="eventBody" type="text" class="form-control"
+                    <textarea autocomplete="off" rows="5" formControlName="eventBody" type="text" class="form-control"
                         id="exampleInputPassword1"></textarea>
                 </div>
 

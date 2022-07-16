@@ -14,8 +14,8 @@ export class EditEventComponent implements OnInit {
   content:any
 
   editForm = this.fb.group({
-    eventHead:['',[Validators.required,Validators.pattern('[a-zA-Z0-9 ]*')]],
-    eventBody:['',[Validators.required,Validators.pattern('[a-zA-Z0-9 ]*')]],
+    eventHead:['',[Validators.required,Validators.pattern('[a-zA-Z0-9 !@#$%^&*()_+-=:;",./\'"]*')]],
+    eventBody:['',[Validators.required,Validators.pattern('[a-zA-Z0-9 !@#$%^&*()_+-=:;",./\'"]*')]],
   })
 
   index = localStorage.getItem('tempIndex')

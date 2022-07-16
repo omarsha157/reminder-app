@@ -18,8 +18,8 @@ export class DataService {
       uniqueid,
       password
     }
-    return this.http.post('https://reminder-app-server.vercel.app/login', data)
-    // return this.http.post('http://localhost:3000/login', data)
+    // return this.http.post('https://reminder-app-server.vercel.app/login', data)
+    return this.http.post('http://localhost:3000/login', data)
   }
 
   register(uniqueid:any,username:any,password:any) {
@@ -28,8 +28,8 @@ export class DataService {
       username,
       password
     }
-    return this.http.post('https://reminder-app-server.vercel.app/register', data)
-    // return this.http.post('http://localhost:3000/register', data)
+    // return this.http.post('https://reminder-app-server.vercel.app/register', data)
+    return this.http.post('http://localhost:3000/register', data)
   }
 
   addEvent(uniqueid:any,eventHead:any,eventBody:any) { 
